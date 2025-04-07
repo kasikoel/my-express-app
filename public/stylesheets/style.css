@@ -1,0 +1,91 @@
+/* Global body style */
+body {
+  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  background: linear-gradient(
+          rgba(0,0,0,0.5),
+          rgba(0,0,0,0.2)
+  ),
+  url('https://source.unsplash.com/1600x900/?calendar,study') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+  margin-top: 3rem;
+}
+
+/* Features Section */
+.features {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 3rem 0;
+}
+
+/* Feature Cards */
+.feature-card {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: rgba(245, 245, 245, 0.9);
+  padding: 3rem 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+
+.animate-fade-in-delay {
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.animate-fade-in-delay2 {
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.animate-fade-up {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.animate-fade-up-delay {
+  animation: fadeIn 0.8s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.animate-fade-up-delay2 {
+  animation: fadeIn 0.8s ease forwards;
+  animation-delay: 0.6s;
+}
