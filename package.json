@@ -1,7 +1,7 @@
 {
   "name": "my-express-app",
   "version": "1.0.0",
-  "description": "A simple Node Express project with a beautiful frontend",
+  "description": "A Node Express project with persistent data, user management, and a vibrant frontend",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -9,9 +9,13 @@
   "author": "Your Name",
   "license": "MIT",
   "dependencies": {
-    "ejs": "^3.1.9",
     "express": "^4.18.2",
+    "ejs": "^3.1.9",
     "express-ejs-layouts": "^2.5.1",
-    "http-proxy-middleware": "^3.0.3"
+    "lowdb": "^1.0.0",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "express-session": "^1.17.3",
+    "body-parser": "^1.20.1"
   }
 }

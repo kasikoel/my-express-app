@@ -23,7 +23,7 @@
                 <div class="card border-0 shadow-sm feature-card animate-fade-up">
                     <div class="card-body text-center">
                         <h5 class="card-title">Easy Management</h5>
-                        <p class="card-text">Organize your courses with a simple, intuitive interface.</p>
+                        <p class="card-text">Organize your courses with an intuitive, 3D interactive interface.</p>
                         <a href="/features/easy-management" class="btn btn-outline-primary">Learn More</a>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                 <div class="card border-0 shadow-sm feature-card animate-fade-up-delay">
                     <div class="card-body text-center">
                         <h5 class="card-title">Real-Time Updates</h5>
-                        <p class="card-text">Stay informed with live notifications and updates.</p>
+                        <p class="card-text">Stay informed with live, dynamic notifications and updates.</p>
                         <a href="/features/real-time-updates" class="btn btn-outline-success">Discover</a>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
                 <div class="card border-0 shadow-sm feature-card animate-fade-up-delay2">
                     <div class="card-body text-center">
                         <h5 class="card-title">Customizable</h5>
-                        <p class="card-text">Tailor the experience to suit your personal needs.</p>
+                        <p class="card-text">Tailor your scheduling experience with customizable features.</p>
                         <a href="/features/customizable" class="btn btn-outline-warning">Customize</a>
                     </div>
                 </div>
@@ -58,7 +58,7 @@
             <div class="col-md-4">
                 <div class="card border-0 shadow-sm p-3 animate-fade-up">
                     <blockquote class="blockquote mb-0 card-body text-center">
-                        <p>"This tool completely transformed how I manage my schedule. Fantastic experience!"</p>
+                        <p>"This tool completely transformed my scheduling experience. Simply amazing!"</p>
                         <footer class="blockquote-footer mt-3">Alex</footer>
                     </blockquote>
                 </div>
@@ -66,7 +66,7 @@
             <div class="col-md-4">
                 <div class="card border-0 shadow-sm p-3 animate-fade-up-delay">
                     <blockquote class="blockquote mb-0 card-body text-center">
-                        <p>"The interface is so beautiful and easy to use. Highly recommended!"</p>
+                        <p>"The 3D interactive interface makes managing my courses fun and easy."</p>
                         <footer class="blockquote-footer mt-3">Taylor</footer>
                     </blockquote>
                 </div>
@@ -74,7 +74,7 @@
             <div class="col-md-4">
                 <div class="card border-0 shadow-sm p-3 animate-fade-up-delay2">
                     <blockquote class="blockquote mb-0 card-body text-center">
-                        <p>"I love the real-time updates; they keep me on track all semester long."</p>
+                        <p>"Real-time updates keep me on track every day. Highly recommended!"</p>
                         <footer class="blockquote-footer mt-3">Jordan</footer>
                     </blockquote>
                 </div>
@@ -82,3 +82,26 @@
         </div>
     </div>
 </section>
+
+<!-- Dynamic Background Script -->
+<script>
+    // Define an array of background image URLs
+    const images = [
+        'https://source.unsplash.com/1600x900/?technology,abstract',
+        'https://source.unsplash.com/1600x900/?nature,water',
+        'https://source.unsplash.com/1600x900/?city,night',
+        'https://source.unsplash.com/1600x900/?space,stars'
+    ];
+
+    let currentIndex = 0;
+    const heroSection = document.querySelector('.hero-section');
+
+    // Function to update the background image with a fade effect
+    function updateBackground() {
+        currentIndex = (currentIndex + 1) % images.length;
+        heroSection.style.backgroundImage = `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.2)), url('${images[currentIndex]}')`;
+    }
+
+    // Change background image every 5 seconds
+    setInterval(updateBackground, 5000);
+</script>
