@@ -1,5 +1,15 @@
 
 <div class="text-center">
     <h2>All Courses</h2>
-    <p>This page will display all courses in a dynamic, interactive 3D layout.</p>
+    <% if (courses && courses.length) { %>
+        <ul class="list-group">
+            <% courses.forEach(course => { %>
+                <li class="list-group-item">
+                    <strong><%= course.name %></strong>: <%= course.description %>
+                </li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No courses available.</p>
+    <% } %>
 </div>

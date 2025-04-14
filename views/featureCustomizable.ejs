@@ -1,5 +1,27 @@
 
-<div class="text-center">
-    <h2>Customizable</h2>
-    <p>Find out how you can personalize your scheduling experience with our tool.</p>
-</div>
+<section class="feature-page customizable" style="background-color: #fff3e0; padding: 2rem;">
+    <div class="container text-center">
+        <h2>Customizable</h2>
+        <p>Choose a background color for your app:</p>
+        <form id="themeForm">
+            <input type="color" id="bgColor" name="bgColor" value="#ff9a9e">
+            <button type="submit" class="btn btn-outline-primary">Apply Theme</button>
+        </form>
+        <p id="themeMessage" class="mt-3"></p>
+    </div>
+</section>
+<script>
+    // Apply saved theme on page load
+    const savedColor = localStorage.getItem('bgColor');
+    if (savedColor) {
+        document.body.style.background = savedColor;
+    }
+
+    document.getElementById('themeForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const selectedColor = document.getElementById('bgColor').value;
+        localStorage.setItem('bgColor', selectedColor);
+        document.body.style.background = selectedColor;
+        document.getElementById('themeMessage').textContent = 'Theme updated!';
+    });
+</script>
