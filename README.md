@@ -100,7 +100,5 @@ docker-compose down
 - **PORT**: The port the server listens on (default: `3000`).
 - **THEME_COLOR**: Hex code for background theme (optional).
 
-## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
